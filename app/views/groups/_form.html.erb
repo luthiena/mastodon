@@ -1,0 +1,7 @@
+<%= form_with(model: @group, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+  <%= form.submit "Create Group" %>
+<% end %>

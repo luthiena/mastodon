@@ -164,6 +164,11 @@ Rails.application.routes.draw do
     get :player
   end
 
+  resources :messages, only: [:create, :index]
+resources :groups do
+  resources :group_memberships, only: [:create, :destroy]
+end
+
   resources :tags,   only: [:show]
   resources :emojis, only: [:show]
   resources :invites, only: [:index, :create, :destroy]
